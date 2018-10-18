@@ -12,9 +12,40 @@ class Album extends Component {
         });
 
         this.state = {
-            album: album
+            album: album,
+            currentSong: album.songs[0],
+            isPlaying: false
         };
+
+        this.audioElement = document.createElement('audio');
+        this.audioElement.src = album.songs[0].audioSrc;
     }
+
+    play() {
+        this.audioElement.play();
+        this.setState({ isPlaying: true });
+    }
+
+    pause() {
+        this.audioElement.pause();
+        this.setState({ isPlaying: false });
+    }
+
+    setSong(song) {
+        this.audioElement.src = song.audioSrc;
+        this.setState({ currentSong: song });
+    }
+
+    handleSongClick(song) {
+        const isSameSong = this.state.currentSong === song;
+        if (this.state.isPlaying && isSameSong) {
+            this.pause();
+        } else {
+            this.play();
+        }
+    }
+
+
 
 
     render() {
@@ -37,11 +68,11 @@ class Album extends Component {
                     <tbody>
 
                         {
-                            this.state.album.songs.map( (songs, index) =>
-                                <Link to={`/album/${songs.audioSrc}`} key={index}>
+                            this.state.album.songs.map( (song, index) =>
+                                <Link to={`/album/${song.audioSrc}`} key={index}>
                                     <tr key="tres">{index + 1}</tr>
-                                    <tr key="uno">{songs.title}</tr>
-                                    <tr key="dos">{songs.duration}</tr>
+                                    <tr key="uno">{song.title}</tr>
+                                    <tr key="dos">{song.duration}</tr>
                                 </Link>
                                
                          )
