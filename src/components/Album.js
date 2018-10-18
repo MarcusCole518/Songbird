@@ -45,6 +45,31 @@ class Album extends Component {
         }
     }
 
+    handleMouseOn(song) {
+        this.setState({ isEntered : song });
+    }
+
+    handleMouseOff(song) {
+        this.setState({ isEntered: song });
+    }
+
+    changeIcon (song, index) {
+        if (song === this.state.isEntered) {
+            if (song === this.state.currentSong && this.state.isPlaying) {
+                return (<span className="icon ion-md-pause"></span>);
+            } else {
+                return (<span className="icon ion-md-play-circle"></span>);
+            }
+        } else {
+            if ( song === this.state.currentSong ) {
+                return (<span className="icon ion-md-pause"></span>)
+            } else {
+                return (index + 1);
+            }
+        }
+
+    }
+
 
 
 
@@ -69,12 +94,8 @@ class Album extends Component {
 
                         {
                             this.state.album.songs.map( (song, index) =>
-<<<<<<< HEAD
-                                <tr className="song" key={index}>
-=======
-                                <tr className="song" key={index} onClick={() => this.handleSongClick(song) }>
->>>>>>> checkpoint-audio-playback
-                                    <td key="uno">{index + 1}</td>
+                                <tr className="song" key={index} onClick={() => this.handleSongClick(song) } onMouseEnter={ () => this.handleMouseOn(song) } onMouseLeave={ () => this.handleMouseOff } >
+                                    <td>{this.changeIcon(song, index)}</td>
                                     <td key="dos">{song.title}</td>
                                     <td key="tres">{song.duration}</td>
                                 </tr>
