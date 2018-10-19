@@ -54,6 +54,14 @@ class Album extends Component {
         this.play();
     }
 
+    handleNextClick() {
+        const currentIndx = this.state.album.songs.findIndex(song => this.state.currentSong === song);
+        const newIndx = Math.min(4, currentIndx + 1);
+        const newSng = this.state.album.songs[newIndx];
+        this.setSong(newSng);
+        this.play();
+    }
+
     handleMouseOn(song) {
         this.setState({ isEntered : song });
     }
@@ -115,7 +123,8 @@ class Album extends Component {
                     isPlaying={this.state.isPlaying} 
                     currentSong={this.state.currentSong}
                     handleSongClick={() => this.handleSongClick(this.state.currentSong)}
-                    handlePrevClick={() => this.handlePrevClick()} />
+                    handlePrevClick={() => this.handlePrevClick()}
+                    handleNextClick={() => this.handleNextClick()} />
             </section>
         );
     }
