@@ -153,13 +153,13 @@ class Album extends Component {
                                     <td>{this.changeIcon(song, index)}</td>
                                     <td key="dos">{song.title}</td>
                                     <td key="tres">{this.formatTime(song.duration)}</td>
-                                </tr>    
+                                </tr>
                          )
                         }
                     </tbody>
                 </table>
                 <PlayerBar 
-                    isPlaying={this.state.isPlaying} 
+                    isPlaying={this.state.isPlaying}
                     currentSong={this.state.currentSong}
                     currentTime={this.audioElement.currentTime}
                     duration={this.audioElement.duration}
