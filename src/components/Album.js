@@ -105,7 +105,11 @@ class Album extends Component {
 
     formatTime(time) {
         let mins = Math.floor(time / 60)
-        let secs = Math.floor(time % 60);
+        if ( time < 10 ) {
+            var secs =  "0" + Math.floor(time % 60);
+        } else {
+            secs =  Math.floor(time % 60);
+        }
         return mins + ':' + secs;
     }
 
@@ -153,13 +157,12 @@ class Album extends Component {
                                     <td>{this.changeIcon(song, index)}</td>
                                     <td key="dos">{song.title}</td>
                                     <td key="tres">{this.formatTime(song.duration)}</td>
-                                </tr>    
-                         )
+                                </tr>)
                         }
                     </tbody>
                 </table>
-                <PlayerBar 
-                    isPlaying={this.state.isPlaying} 
+                <PlayerBar
+                    isPlaying={this.state.isPlaying}
                     currentSong={this.state.currentSong}
                     currentTime={this.audioElement.currentTime}
                     duration={this.audioElement.duration}
