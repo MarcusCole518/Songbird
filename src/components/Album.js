@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import albumData from './../data/albums';
-<<<<<<< HEAD
 import PlayerBar from './PlayerBar';
-=======
->>>>>>> assignment-album
 
 class Album extends Component {
 
@@ -152,17 +149,10 @@ class Album extends Component {
                     <tbody>
                         {
                             this.state.album.songs.map( (song, index) =>
-<<<<<<< HEAD
                                 <tr className="song" key={index} onClick={() => this.handleSongClick(song) } onMouseEnter={ () => this.handleMouseOn(song) } onMouseLeave={ () => this.handleMouseOff } >
-                                    <td>{this.changeIcon(song, index)}</td>
-                                    <td key="dos">{song.title}</td>
-                                    <td key="tres">{this.formatTime(song.duration)}</td>
-=======
-                                <tr className="song" key={index}>
-                                    <td key="track_number">{index + 1}</td>
+                                    <td key="track_number">{this.changeIcon(song, index)}</td>
                                     <td key="song_title">{song.title}</td>
-                                    <td key="song_duration">{song.duration}</td>
->>>>>>> assignment-album
+                                    <td key="song_duration">{this.formatTime(song.duration)}</td>
                                 </tr>
                          )
                         }
