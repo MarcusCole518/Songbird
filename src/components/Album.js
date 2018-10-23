@@ -154,9 +154,9 @@ class Album extends Component {
                         {
                             this.state.album.songs.map( (song, index) =>
                                 <tr className="song" key={index} onClick={() => this.handleSongClick(song) } onMouseEnter={ () => this.handleMouseOn(song) } onMouseLeave={ () => this.handleMouseOff } >
-                                    <td>{this.changeIcon(song, index)}</td>
-                                    <td key="dos">{song.title}</td>
-                                    <td key="tres">{this.formatTime(song.duration)}</td>
+                                    <td key="track_number">{this.changeIcon(song, index)}</td>
+                                    <td key="song_title">{song.title}</td>
+                                    <td key="song_duration">{this.formatTime(song.duration)}</td>
                                 </tr>)
                         }
                     </tbody>
