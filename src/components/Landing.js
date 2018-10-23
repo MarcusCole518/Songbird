@@ -1,10 +1,10 @@
 import React from 'react';
-import './src/../../css/jams.css';
+
 
 const Landing = () => (
 	<section className="landing">
 		<h1 className="hero-title">Turn the music up!</h1>
-
+		<img src="https://s3-us-west-1.amazonaws.com/photos.snapwi.re/Week+11/SW_CalebMorris1.jpg" alt="instruments" />
 		<section className="selling-points">
 			<div className="point">
 				<h2 className="point-title">Choose your music</h2>

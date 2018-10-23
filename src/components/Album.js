@@ -104,9 +104,13 @@ class Album extends Component {
     }
 
     formatTime(time) {
-        let mins = Math.floor(time / 60)
-        let secs = Math.floor(time % 60);
-        return mins + ':' + secs;
+        let space = (num, size) => {
+            return ('000' + num).slice(size * -1);
+        }
+        time = parseFloat(time).toFixed(3);
+        let minutes = Math.floor( time / 60 % 60);
+        let seconds = Math.floor( time % 60);
+        return space(minutes, 1) + ':' + space(seconds, 2);
     }
 
     changeIcon (song, index) {
