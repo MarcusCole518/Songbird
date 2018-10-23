@@ -104,9 +104,19 @@ class Album extends Component {
     }
 
     formatTime(time) {
+<<<<<<< HEAD
         let mins = Math.floor(time / 60)
         let secs = Math.floor(time % 60);
         return mins + ':' + secs;
+=======
+        let space = (num, size) => {
+            return ('000' + num).slice(size * -1);
+        }
+        time = parseFloat(time).toFixed(3);
+        let minutes = Math.floor( time / 60 % 60);
+        let seconds = Math.floor( time % 60);
+        return space(minutes, 1) + ':' + space(seconds, 2);
+>>>>>>> assignment-range-inputs
     }
 
     changeIcon (song, index) {
@@ -153,8 +163,12 @@ class Album extends Component {
                                     <td key="track_number">{this.changeIcon(song, index)}</td>
                                     <td key="song_title">{song.title}</td>
                                     <td key="song_duration">{this.formatTime(song.duration)}</td>
+<<<<<<< HEAD
                                 </tr>
                          )
+=======
+                                </tr>)
+>>>>>>> assignment-range-inputs
                         }
                     </tbody>
                 </table>
