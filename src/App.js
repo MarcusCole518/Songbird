@@ -4,6 +4,7 @@ import './App.css';
 import Landing from './components/Landing';
 import Library from './components/Library';
 import Album from './components/Album';
+
 class App extends Component {
   render() {
     return (
@@ -24,6 +25,10 @@ class App extends Component {
           <Route path="/library" component={Library} />
           <Route path="/album/:slug" component={Album} />
         </main>
+      <div className="footer">
+		  	<button className="linkedin-button"><a className="linkedin-link" href="https://www.linkedin.com/in/marcus-little-74781478/" target="_blank" rel="noopener noreferrer">LinkedIn</a></button>
+			  <button className="github-button"><a className="github-link" href="https://github.com/MarcusCole518" target="_blank" rel="noopener noreferrer">Github</a></button>
+		  </div>
       </div>
     );
   }

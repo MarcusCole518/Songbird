@@ -3,7 +3,7 @@
 }
 
 body {
-  background: rgb(166, 189, 170);
+  background: rgb(235, 241, 236);
 }
 
 .nav-bar {
@@ -15,11 +15,11 @@ body {
   display: inline-block;
   padding: .7em 1.4em;
   margin: 0 .3em .3em 0;
-  border-radius: .15em;
+  border-radius: .50em;
   box-sizing: border-box;
   font-family: 'Righteous', cursive;
   font-weight: 400;
-  background-color: rgb(79, 192, 98);
+  background-color: rgb(28, 30, 168);
   box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, .17);
   text-align: center;
   position: relative;
@@ -44,11 +44,11 @@ body {
   display: inline-block;
   padding: .7em 1.4em;
   margin: 0 .3em .3em 0;
-  border-radius: .15em;
+  border-radius: .50em;
   box-sizing: border-box;
   font-family: 'Righteous', cursive;
   font-weight: 400;
-  background-color: rgb(79, 192, 98);
+  background-color: rgb(28, 30, 168);
   box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, .17);
   text-align: center;
   position: relative;
@@ -77,20 +77,136 @@ body {
   font-size: 75px;
   text-shadow: 0px 2px 3px #555;
   font-family: 'Righteous', cursive;
-  color: #fcfcfc;
+  color: #272525;
 }
 
 .hero-title {
   margin-top: 5px;
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Righteous', cursive;
   padding-bottom: 25px;
-  color: #fcfcfc;
+  color: rgb(28, 30, 168);
   text-shadow: 0px 2px 3px #555;
+  font-size: 40px;
 }
 
 img {
-  width: 75%;
-  height: 500px;
+  max-width: 75%;
+  height: auto;
+  box-shadow: 3px 3px 3px #777;
+  border-radius: 3%;
+}
+
+.point-title {
+  font-family: 'Righteous', cursive;
+  color: #272525;
+  text-shadow: 0px 2px 3px #555;
+  margin-bottom: .5%;
+  font-size: 40px;
+}
+
+.point-description {
+  font-family: 'Righteous', cursive;
+  color: rgb(28, 30, 168);
+  text-shadow: 0px 1px 1.5px #555;
+  margin-bottom: 10%;
+  margin-top: .5%;
+  font-size: 25px;
+  padding: 2%;
+}
+
+.point1 {
+  max-width: 50%;
+  height: auto;
+  float: left;
+  margin-bottom: 10%;
+  text-align: left;
+}
+
+.point2 {
+  max-width: 50%;
+  height: auto;
+  float: right;
+  text-align: right;
+  margin-bottom: 10%;
+}
+
+.vinyl {
+  max-width: 50%;
+  height: auto;
+}
+
+.concert {
+  max-width: 50%;
+  height: auto;
+}
+
+.rule {
+	height: 10px;
+	border: 0;
+	box-shadow: 0 10px 10px -10px #8c8b8b inset;
+}
+
+.footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: rgb(235, 241, 236);
+  text-align: center;
+}
+
+.linkedin-button {
+  display: inline-block;
+  padding: .7em 1.4em;
+  margin: 0 .3em .3em 0;
+  border-radius: .50em;
+  box-sizing: border-box;
+  font-family: 'Righteous', cursive;
+  font-weight: 400;
+  background-color: rgb(28, 30, 168);
+  box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, .17);
+  text-align: center;
+  position: relative;
+}
+
+.linkedin-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.github-button {
+  display: inline-block;
+  padding: .7em 1.4em;
+  margin: 0 .3em .3em 0;
+  border-radius: .50em;
+  box-sizing: border-box;
+  font-family: 'Righteous', cursive;
+  font-weight: 400;
+  background-color: rgb(28, 30, 168);
+  box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, .17);
+  text-align: center;
+  position: relative;
+}
+
+.github-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.library {
+  margin-bottom: 10%;
+}
+
+.library-item {
+  font-family: 'Righteous', cursive;
+  color: #272525;
+}
+
+.library-list {
+  text-decoration: none;
 }
 
 @media all and (max-width: 30em) {
@@ -100,5 +216,4 @@ img {
   }
 }
 
-@import url('https://fonts.googleapis.com/css?family=Righteous');
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Righteous');
+@import url('https://fonts.googleapis.com/css?family=Acme|Gloria+Hallelujah|Righteous');
