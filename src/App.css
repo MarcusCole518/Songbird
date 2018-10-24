@@ -31,7 +31,7 @@ body {
 }
 
 .landing-button:active {
-  top: .1em;
+  background-color: rgb(67, 69, 204);
 }
 
 .landing-link {
@@ -207,6 +207,35 @@ img {
 
 .library-list {
   text-decoration: none;
+}
+
+.album {
+  margin-bottom: 10%;
+}
+
+.album-details {
+  font-family: 'Righteous', cursive;
+  color: #272525;
+}
+
+.track-list {
+  margin: 3% auto 3% auto;
+  font-family: 'Righteous', cursive;
+  color: #272525;
+}
+
+.current-time {
+  font-family: 'Righteous', cursive;
+  color: #272525;
+}
+
+.total-time {
+  font-family: 'Righteous', cursive;
+  color: #272525;
+}
+
+#release-info {
+  color: rgb(28, 30, 168);
 }
 
 @media all and (max-width: 30em) {
