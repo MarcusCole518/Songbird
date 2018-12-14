@@ -18,7 +18,7 @@ class App extends Component {
               <Link className="library-link" to='/library'>Library</Link>
             </button>
           </nav>
-          <h1 className="heading">Bloc Jams</h1>
+          <h1 className="heading">Songbird</h1>
         </header>
         <main>
           <Route exact path="/" component={Landing} />
