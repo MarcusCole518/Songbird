@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 class App extends Component {
   render() {
     return (
-      <React.Fragment className="App">
+      <div className="App">
         <header>
           <nav className="nav-bar">
             <button className="landing-button">
@@ -30,7 +30,7 @@ class App extends Component {
 		  	  <button className="linkedin-button"><a className="linkedin-link" href="https://www.linkedin.com/in/marcus-little-74781478/" target="_blank" rel="noopener noreferrer">LinkedIn</a></button>
 			    <button className="github-button"><a className="github-link" href="https://github.com/MarcusCole518" target="_blank" rel="noopener noreferrer">Github</a></button>
 		    </div>
-      </React.Fragment>
+      </div>
     );
   }
 }
