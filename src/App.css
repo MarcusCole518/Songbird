@@ -3,7 +3,7 @@
 }
 
 body {
-  background: rgb(235, 241, 236);
+  background: rgb(235, 241, 236) !important;
 }
 
 .nav-bar {
@@ -90,7 +90,7 @@ body {
 }
 
 img {
-  max-width: 75%;
+  max-width: 70%;
   height: auto;
   box-shadow: 3px 3px 3px #777;
   border-radius: 3%;
