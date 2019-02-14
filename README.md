@@ -21,10 +21,12 @@ Project is created with:
 <a href="https://ibb.co/BNqnSmH"><img src="https://i.ibb.co/9tsZCJm/Screen-Shot-2019-02-02-at-10-14-25-AM.png" alt="Screen-Shot-2019-02-02-at-10-14-25-AM" border="0"></a>
 	
 ## Setup
-To run this project, install it locally using npm:
+* Clone this repository: `git clone git@github.com:MarcusCole518/Songbird.git`
+
+* Install it locally using npm:
 
 ```
-$ cd ../Songbird
+$ cd Songbird
 $ npm install
 $ npm start
 ```
